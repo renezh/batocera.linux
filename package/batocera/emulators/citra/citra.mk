@@ -3,7 +3,7 @@
 # CITRA
 #
 ################################################################################
-# Version.: Commits on Jul 08, 2020
+# Version.: Commits on Aug 01, 2020
 
 CITRA_DEPENDENCIES = fmt boost ffmpeg sdl2
 CITRA_SITE_METHOD=git
@@ -18,7 +18,7 @@ CITRA_CONF_OPTS += -DENABLE_QT=OFF
 
 # Use citra for x86_64 and enable citra-qt
 else
-CITRA_VERSION = 842031a2eb0b4bac4a351db914530296812962d1
+CITRA_VERSION = c40871f126a5942b16b8b240d256b59e25b5e7ae
 CITRA_SITE = https://github.com/citra-emu/citra.git
 CITRA_CONF_OPTS += -DENABLE_QT=ON
 CITRA_CONF_OPTS += -DENABLE_QT_TRANSLATION=ON
