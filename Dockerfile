@@ -1,4 +1,4 @@
-FROM ubuntu:20.10
+FROM ubuntu:hirsute
 ARG DEBIAN_FRONTEND=noninteractive
 RUN dpkg --add-architecture i386 && \
 	apt-get update && \
@@ -37,8 +37,9 @@ RUN dpkg --add-architecture i386 && \
 		python \
 		gcc-multilib \
 		g++-multilib \
-	&& apt-get clean \
-	&& rm -rf /var/lib/apt/lists/*
+		g++-11 \
+		gcc-11 \
+	&& apt-get clean
 
 # Set locale
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
